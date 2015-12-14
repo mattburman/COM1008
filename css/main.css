@@ -1,0 +1,393 @@
+/* Written by: Matt Burman */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+/* Reset */
+*{
+  padding: 0;
+  margin: 0;
+}
+ul{
+  list-style-type: none;
+}
+
+/*
+ * PAGE-WIDE STYLES
+ *
+*/
+p{
+  font-size: calc(1vw + 1vh);
+}
+article{
+  width: 100%;
+}
+a{
+  text-decoration: none;
+  font-family: "Roboto", Helvetica, sans-serif;
+  width: 100%;
+  color: #212121;
+}
+main{
+  height: 100%;
+  padding-bottom: 50px;
+}
+h1{
+  font-size: 1.5em;
+}
+body *{
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+body {
+  background-color: #F2F2F2;
+}
+.flexbox{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.icon{
+  height: 0.9em;
+}
+.has-aside{
+  width: 100%;
+}
+
+
+/*
+ *  NAVIGATIONAL STYLES
+ *  Header, Footer, Hamburger, header/footer links
+*/
+/* ~~~ Header / footer shared styles~~~*/
+header, footer{
+  height: 50px;
+  background: #1976D2;
+  width: 100%;
+}
+header .links ul li a, footer ul li a{
+  transition: color 0.5s ease;
+  color: #fff;
+}
+header .links ul li a:hover, footer ul li a:hover{
+  color: #000;
+}
+header li, footer li{
+  list-style-type: none;
+}
+
+/* Header-specific */
+header{
+  top: 0;
+  position: fixed;
+  z-index: 1;/*Keep in front of index 0 (the content)*/
+  box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.26),
+              0px 10px 20px 0px rgba(0,0,0,0.19);
+}
+.name{
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size:30px;
+  color: white;
+  position: absolute;
+}
+.links{/*values until #side-trigger:checked*/
+  width: 50%;
+  height: 100%;
+  z-index: 4;
+  background: #2196F3;
+  left: -50%;/* Keep offscreen until :checked */
+  /* Make it left: 0; when :checked*/
+  position: absolute;
+}
+
+/* Footer-specific */
+
+footer .flexbox ul{
+  width: 33%;
+  text-align: center;
+}
+footer .flexbox ul li{
+  width: 100%;
+}
+footer{
+  line-height: 50px;
+  box-shadow: 0px -5px 6px 0px rgba(0,0,0,0.26),
+              0px -10px 20px 0px rgba(0,0,0,0.19);
+}
+
+/*header li/a also takes these values when viewport width large enough*/
+footer .accessibility{
+  background: #2196F3;
+  line-height: 40px;
+  margin: 10px 10px 0 0;
+}
+footer a{
+  display: block;
+}
+
+/* ~~~ Hamburger menu ~~~ */
+.hamburger, .close, #side-trigger{
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.top{
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  /*whole media query is for hamburger menu*/
+  /*Applies on mobile*/
+  #side-trigger:not(:checked) {
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    position: fixed;
+    z-index: 3;
+  }
+
+  #side-trigger:checked {
+    /*Clicking anywhere will close the nav.*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 3;
+  }
+  #side-trigger:checked ~ .hamburger{
+    display: none;
+  }
+  #side-trigger:not(:checked) ~ .close{
+    display: none;
+  }
+  #side-trigger:checked ~ .links {
+    position: fixed;
+    top: 50px; /*must change with header height*/
+    left: 0; /*bring onscreen when hamburger is checked*/
+  }
+
+  #side-trigger:checked ~ .links ul li {
+    background: #03A9F4;
+  }
+  #side-trigger:checked ~ .links ul li a{
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 1em 0;
+    border-width:0px 0 1px 0;
+    border-style: solid;
+    border-color: #B6B6B6;
+  }
+
+  #side-trigger:checked ~ .links ul li a:hover {
+    background: #BBDEFB;
+    color: #212121;
+  }
+}
+
+
+/*
+ * PAGE ELEMENTS
+ * EG cards, card elements, content flexbox
+*/
+.main-flex{
+  top: 50px;/*Adjusted for the header height.*/
+  margin: 5px;
+  position: relative;
+}
+
+/* ~~~ Card ~~~ */
+.card{
+  background: #FFF;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.10), 0px 1px 2px 0px rgba(0,0,0,0.20);
+  min-height: 200px;
+  margin: 5px;
+  border-radius: 1px;
+}
+.card a li{
+  color: rgba(0,0,0,0.54);
+}
+.card li a, .card p a, figcaption a{
+  opacity: 0.8;
+  text-decoration: underline;
+  color: #2196F3;
+}
+.card a:hover{
+  font-weight: bolder;
+}
+.card figure img{
+  width: 100%;
+}
+.card figcaption{
+  background-color: #F2F2F2;
+  border-top: 4px solid #f8f8f8;
+  border-bottom: 8px solid #f8f8f8;
+  padding: 5px 10px;
+  color: rgba(0,0,0, 0.54);
+}
+
+.card-header, .card-subheader, .card-footer, .card-text, .card-links, .divider{
+  width: 100%;
+  box-sizing: border-box;
+}
+.card:hover{
+  box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.23), 0px 3px 6px 0px rgba(0,0,0,0.16);
+}
+.card-header{
+  font-size: 1em;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #B6B6B6;
+}
+.card-links{
+  width: 100%;
+  border-bottom: 1px solid #b6b6b6;
+  border-top: 1px solid #b6b6b6;
+}
+.card-links li{
+  list-style-type: none;
+  border-top: thin black solid;
+  text-indent: 10px;
+  padding: 10px 0;
+  border-top: 1px solid #b6b6b6;
+}
+.card-links li:hover{
+  font-weight: bolder;
+}
+.card-subheader{
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: 1px solid #B6B6B6;
+}
+.card-subheader h2{
+  font-size: 1.1em;
+  text-indent: 20px;
+  color: #B6B6B6;
+}
+.divider{
+  border-top: 1px solid #B6B6B6;
+}
+.card-text{
+  padding: 10px;
+  height: 100%;
+}
+.card p{
+  padding: 5px 0;
+}
+.card-footer{
+  color: #727272;
+  border-bottom: 1px solid #B6B6B6;
+  padding: 10px 0 10px 10px;
+}
+.card iframe{
+  width: 100%;
+  height: 1200px;
+  border: 0;
+}
+/* Small cards must come in pairs in the HTML
+   100% width at small, mobile viewports
+50% width at medium, tablet viewports
+*/
+.small{
+  width: 100%;
+}
+.large{
+  width: 100%;
+}
+/* ~Tablet width cards */
+@media screen and (min-width: 600px){
+  .small{/* Set small pairs to side-by-side */
+    width: calc(50% - 10px);/*This is valid yet the validator says not? validator bug? http://stackoverflow.com/questions/24696512/css3-calc-validation-value-error-width-parse-error*/
+  }
+}
+@media screen and (min-width: 768px){
+  /*Page-wide*/
+  .card-text + figure, .card-text + aside{
+    width: 50%;/*card-text also will be 50% for side-by-side*/
+  }
+  .card-text.has-aside{
+    width: 50%;
+  }
+
+  /* set larger card margins, shadows, corner radi */
+  .card{
+    margin: 10px;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.23),
+                0px 3px 6px 0px rgba(0,0,0,0.16);
+    border-radius: 2px;
+  }
+  .card:hover{
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.26),
+                0px 14px 28px 0px rgba(0,0,0,0.25);
+  }
+  .main-flex{
+    top: 65px;
+    margin: 10px;
+  }
+  .small{
+    width: calc(50% - 20px);/*This is valid yet the validator says not?*/
+  }
+
+  /*header/footer*/
+  /* Header/footer shared styles */
+  header, footer{
+    height: 65px;
+  }
+
+  .links li, footer .accessibility{
+    display: inline-block;
+    background: #2196F3;
+    line-height: 55px;
+    height: 100%;
+    width: 20%;
+    min-width: 100px;
+    margin: 10px 5px 0 0;
+  }
+  .links a, footer a{
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 1.5em;
+  }
+  /*Header-specific*/
+  .name{/*text is still 30px high. needs to fill header of 65px*/
+    /*17.5 + 17.5 + 30 = 65px*/
+    padding: 17.5px 10px;
+  }
+  .hamburger, .side-trigger, .close{
+    display: none;
+  }
+  .top{
+    display: block;
+    height: 65px;
+  }
+  .links ul #homeLink{
+    display: none;
+  }
+  .links{
+    text-align: center;
+    width: calc(80% - 75px);
+    top: 0;
+    margin: 0 auto;
+    background: none;
+    left: 75px;
+  }
+
+  /*footer-specific*/
+  footer{
+    margin-top: 15px;
+  }
+  footer ul{
+    font-size: 1.3em;
+    line-height: 65px;
+  }
+
+}
+
+@media screen and (min-width: 1120px){
+  .main-flex{
+    width: 1100px;
+    margin: 10px auto;
+  }
+}

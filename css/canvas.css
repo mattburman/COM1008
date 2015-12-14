@@ -1,0 +1,73 @@
+/* Written by: Matt Burman */
+
+/* give <html> this class to stop scrolling */
+.no-scrolling{
+  height: 100%;
+  overflow:hidden;
+}
+
+canvas{
+  border: 1px solid gray;
+}
+
+/* Input fields / buttons */
+input{
+  width: 95%;
+  border-radius: 3px;
+  padding: 5px;
+}
+input:active{
+  border-color: #03A9F4;
+  border-radius: 4px;
+}
+input:hover{
+  transition: background-color 0.5s ease;
+  background-color: #F2F2F2;
+}
+
+button, input{
+  font-family: inherit;
+  font-size: 100%;
+}
+
+button{
+  width: 100%;
+  font-size: 20px;
+  border-radius: 28px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+/* Difficulty buttons */
+#easy{
+  background-color: deepskyblue;
+}
+#medium{
+  background-color: green;
+}
+#hard{
+  background-color: yellow;
+}
+#extreme{
+  background-color: orange;
+}
+#maddock{
+  background-color: red;
+}
+button:hover, #easy:hover, #medium:hover, #hard:hover, #extreme:hover, #maddock:hover{
+  background-color: rgba(50,50,50,0.5);
+}
+
+/* Fallback strategy for low viewport devices */
+@media screen and (max-width: 840px){
+  .size-warning{
+    display: block;
+  }
+}
+@media screen and (min-width: 839px){
+  .size-warning{
+    display: none;
+  }
+}

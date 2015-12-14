@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Accessibility Statement</title>
+
+  <meta name="author" content="Matt Burman"/>
+  <meta name="description" content="Accessibility statement for this website"/>
+  <meta name="copyright" content="Matt Burman"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="../css/main.css"/>
+
+</head>
+<body>
+<header>
+
+  <input type="checkbox" id="side-trigger" class="side-trigger"/>
+
+  <!-- HAMBURGER MENU HANDLING -->
+  <img src="../img/min/hamburger.svg" alt="Open Menu Button" class="hamburger"/>
+  <img src="../img/min/close.svg" alt="Close Menu Button" class="close"/>
+  <a href="#"><img src="../img/min/up-arrow.svg" alt="Top Button" class="top"/></a>
+
+  <!-- Blue-white buttons -->
+  <nav class="links">
+    <ul>
+      <li id="home-link"><a href="../">Home</a></li>
+      <li><a href="../degree">Degree</a></li>
+      <li><a href="../blog">Blog</a></li>
+      <li><a href="../contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- White text -->
+  <div class="name">Matt Burman</div>
+</header>
+<main>
+
+  <div class="flexbox main-flex">
+    <!-- CARDS -->
+
+    <div class="large card flexbox">
+      <div class="card-header">
+        <h1>Accessibility Statement</h1>
+      </div>
+      <div class="card-text">
+        <p>
+          Every effort has been made to making every web page on this site
+          accessible to all. I have tried to follow the Web Content Accessibility
+          Guidelines (WCAG) AAA guidelines where possible, or AA at least.
+        </p>
+        <p>
+          All contrast ratios meet W3's
+          The W3C Web Content Accessibility Guidelines’ (WCAG) “Contrast Enhanced”
+          Level AAA criterion, allowing users with 80:20 vision or better to
+          be able to make out all text
+        </p>
+        <p>
+          Users of screen readers will be able to understand what is in images
+          by the alt tags in the HTML of the pages.
+        </p>
+        <p>
+          All styling is done through CSS rather than JavaScript, so custom
+          stylesheets can be applied to accommodate any user's custom visual
+          needs.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="flexbox">
+    <ul></ul><!-- basically a padding element -->
+    <ul>
+      <li>&copy; Matt Burman</li>
+    </ul>
+    <ul>
+      <li><a href="#">Accessibility</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Homepage - Matt Burman, University of Sheffield</title>
+
+  <meta name="author" content="Matt Burman"/>
+  <meta name="description" content="Matt Burman's homepage - assignment website
+  homepage for COM1008, University of Sheffield"/>
+  <meta name="copyright" content="Matt Burman"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+<header>
+
+  <!-- HAMBURGER MENU HANDLING -->
+  <input type="checkbox" id="side-trigger" class="side-trigger"/>
+  <img src="./img/min/hamburger.svg" alt="Open Menu Button" class="hamburger"/>
+  <img src="./img/min/close.svg" alt="Close Menu Button" class="close"/>
+  <a href="#"><img src="./img/min/up-arrow.svg" alt="Top Button" class="top"/></a>
+
+  <!-- Blue-white buttons -->
+  <nav class="links">
+    <ul>
+      <li id="home-link"><a href="#">Home</a></li>
+      <li><a href="degree">Degree</a></li>
+      <li><a href="blog">Blog</a></li>
+      <li><a href="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- White text -->
+  <div class="name">
+    Matt Burman
+  </div>
+
+</header>
+<main>
+  <div class="flexbox main-flex">
+    <!-- CARDS -->
+
+    <!-- DEGREE CARD -->
+    <div class="small card">
+      <a href="degree">
+        <div class="card-header">
+          <h1>Degree</h1>
+        </div>
+        <div class="card-subheader">
+          <h2>
+            <img src="./img/min/right-arrow.svg" class="icon" alt="Arrow icon"/>
+            View degree page
+          </h2>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card-text">
+          <p>
+            The degree page is all about my Computer Science degree
+            at the University of Sheffield.
+            I am currently a first year.
+          </p>
+
+          <p>
+            You can read about the modules I am currently taking
+            and my personal perspective.
+            These are supplemented with photographs.
+          </p>
+
+          <p>
+            There will also be links to some official University resources.
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <!-- BLOG CARD -->
+    <div class="small card flexbox">
+      <article>
+        <a href="blog">
+          <div class="card-header">
+            <h1>Blog</h1>
+          </div>
+          <div class="card-subheader">
+            <h2>
+              <img src="./img/min/right-arrow.svg" class="icon" alt="arrow icon"/>
+              View blog
+            </h2>
+          </div>
+          <div class="divider"></div>
+          <div class="card-text">
+            <p>
+              The blog contains a series of blog articles
+              accompanied by relevant photographs.
+            </p>
+          </div>
+        </a>
+
+        <div class="card-links">
+          <a href="./blog">
+            <div class="card-subheader">
+              <h2>
+                <img src="./img/min/right-arrow.svg" class="icon" alt="arrow icon"/>
+                Quick links
+              </h2>
+            </div>
+          </a>
+          <ul>
+            <li>
+              <a href="./blog/the-benefits-of-the-diamond-building-at-the-university-of-sheffield.html">
+                The benefits of The Diamond Building
+              </a>
+            </li>
+            <li>
+              <a href="./blog/the-benefits-of-virtual-machines-at-university.html">
+                The benefits of Virtual Machines
+              </a>
+            </li>
+            <li>
+              <a href="./blog/the-benefits-of-vim.html">
+                The benefits of Vim
+              </a>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <!-- CONTACT CARD -->
+    <div class="small card flexbox"><a href="./contact">
+      <article>
+        <div class="card-header">
+          <h1>Contact</h1>
+        </div>
+        <div class="card-subheader">
+          <h2>
+            <img class="icon" src="./img/min/right-arrow.svg" alt="arrow icon"/>
+            View contact page
+          </h2>
+        </div>
+        <div class="divider"></div>
+        <div class="card-text">
+          <p>
+            On this page you can contact me via form,
+            where i will receive your email.
+          </p>
+        </div>
+      </article>
+    </a></div>
+
+    <!-- A11Y CARD -->
+    <div class="small card flexbox"><a href="./accessibility">
+      <div class="card-header">
+        <h1>Accessibility</h1>
+      </div>
+      <div class="card-subheader">
+        <h2>
+          <img class="icon" src="./img/min/right-arrow.svg" alt="arrow icon"/>
+          View accessibility statement
+        </h2>
+      </div>
+      <div class="divider"></div>
+      <div class="card-text">
+        <p>
+          On this page you can read about
+          how this site was created with all users in mind.
+        </p>
+      </div>
+    </a></div>
+
+    <!-- About me / Other website card -->
+    <div class="large card">
+      <article>
+        <div class="flexbox">
+          <a href="https://mattburman.com">
+            <div class="card-header">
+              <h1>About me / My other website</h1>
+            </div>
+          </a>
+          <iframe src="http://mattburman.com"></iframe>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</main>
+<footer>
+  <div class="flexbox">
+    <ul></ul><!-- basically a padding element -->
+    <ul>
+      <li>&copy; Matt Burman</li>
+    </ul>
+    <ul>
+      <li class="accessibility"><a href="./accessibility">Accessibility</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

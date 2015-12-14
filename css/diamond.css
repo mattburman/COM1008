@@ -1,0 +1,18 @@
+/* Written by: Matt Burman */
+
+.feature{ /* A text line in the header - a feature of the diamond */
+  width: 100%;
+  color: white;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.1vw black;
+  font-size: 5vw;
+}
+.right{
+  text-align: right;
+}
+.center{
+  text-align: center;
+}
+.diamond-bg{
+  background: #FFF url("../img/min/diamond-banner.jpg") 90% no-repeat border-box;
+}

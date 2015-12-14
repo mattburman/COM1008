@@ -78,7 +78,7 @@
 
     <!-- BLOG CARD -->
     <div class="small card flexbox">
-      <article>
+      <article class="flexbox">
         <a href="blog">
           <div class="card-header">
             <h1>Blog</h1>
@@ -130,7 +130,7 @@
 
     <!-- CONTACT CARD -->
     <div class="small card flexbox"><a href="./contact">
-      <article>
+      <article class="flexbox">
         <div class="card-header">
           <h1>Contact</h1>
         </div>
@@ -152,37 +152,60 @@
 
     <!-- A11Y CARD -->
     <div class="small card flexbox"><a href="./accessibility">
-      <div class="card-header">
-        <h1>Accessibility</h1>
-      </div>
-      <div class="card-subheader">
-        <h2>
-          <img class="icon" src="./img/min/right-arrow.svg" alt="arrow icon"/>
-          View accessibility statement
-        </h2>
-      </div>
-      <div class="divider"></div>
-      <div class="card-text">
-        <p>
-          On this page you can read about
-          how this site was created with all users in mind.
-        </p>
-      </div>
+      <article class="flexbox">
+        <div class="card-header">
+          <h1>Accessibility</h1>
+        </div>
+        <div class="card-subheader">
+          <h2>
+            <img class="icon" src="./img/min/right-arrow.svg" alt="arrow icon"/>
+            View accessibility statement
+          </h2>
+        </div>
+        <div class="divider"></div>
+        <div class="card-text">
+          <p>
+            On this page you can read about
+            how this site was created with all users in mind.
+          </p>
+        </div>
+      </article>
     </a></div>
+
+    <div class="large card">
+      <a href="./game">
+        <article class="flexbox">
+          <div class="card-header"><h2>Canvas Game - Whack-a-mole</h2></div>
+          <div class="card-subheader">
+            <h2>
+              <img class="icon" src="./img/min/right-arrow.svg" alt="arrow icon"/>
+              Play canvas game
+            </h2>
+          </div>
+          <div class="card-text">
+            <p>
+              This game was implemented in JavaScript on the canvas
+            </p>
+            <p>
+              Click here to play now.
+            </p>
+          </div>
+        </article>
+      </a>
+    </div>
 
     <!-- About me / Other website card -->
     <div class="large card">
-      <article>
-        <div class="flexbox">
-          <a href="https://mattburman.com">
-            <div class="card-header">
-              <h1>About me / My other website</h1>
-            </div>
-          </a>
-          <iframe src="http://mattburman.com"></iframe>
-        </div>
+      <article class="flexbox">
+        <a href="https://mattburman.com">
+          <div class="card-header">
+            <h1>About me / My other website</h1>
+          </div>
+        </a>
+        <iframe src="http://mattburman.com"></iframe>
       </article>
     </div>
+
 
   </div>
 </main>

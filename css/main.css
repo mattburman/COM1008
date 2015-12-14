@@ -20,6 +20,12 @@ p{
 article{
   width: 100%;
 }
+ul{
+  display: block;
+}
+.card{
+  display: block;
+}
 a{
   text-decoration: none;
   font-family: "Roboto", Helvetica, sans-serif;
@@ -355,8 +361,10 @@ footer a{
     /*17.5 + 17.5 + 30 = 65px*/
     padding: 17.5px 10px;
   }
-  .hamburger, .side-trigger, .close{
+  .hamburger, .side-trigger, .close, #side-trigger{
     display: none;
+    visibility: hidden;
+    opacity: 0;
   }
   .top{
     display: block;
